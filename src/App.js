@@ -1,23 +1,16 @@
 import React from "react";
 import "./App.css";
+import SearchEngine from "./SearchEngine";
+import Main from "./Main";
+import Footer from "./Footer";
 
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
-        <h1>My weather app</h1>
-        <div>
-          {" "}
-          This project is
-          <a
-            href="https://github.com/Serena-Ammendola/weather-app-react-project"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {" "}
-            opened source on GitHub
-          </a>
-        </div>
+      <div className="weather-app">
+        <SearchEngine />
+        <Main />
+        <Footer />
       </div>
     </div>
   );
