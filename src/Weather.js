@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function showTemp(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -14,7 +16,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       iconUrl:
         "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png",
-      date: "Friday 22:27",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -37,7 +39,9 @@ export default function Weather(props) {
             <div>
               <h1 className="weather-city">{weatherData.city}</h1>
               <p className="weather-details">
-                <span>{weatherData.date}</span>,{" "}
+                <span>
+                  <FormattedDate date={weatherData.date} />,
+                </span>
                 <span className="text-capitalize">
                   {weatherData.description}
                 </span>
