@@ -15,24 +15,25 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      iconUrl:
-        "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
   }
+
   function search() {
     let apiKey = "3f6be1c407b0d9d1933561808db358ba";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    console.log(apiUrl);
     axios.get(apiUrl).then(showTemperature);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
+    search(); // Call the search function only when the form is submitted
   }
 
   function handleCityChange(event) {
     setCity(event.target.value);
-    search();
   }
 
   if (weatherData.ready) {
