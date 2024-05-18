@@ -26,7 +26,6 @@ export default function WeatherInfo(props) {
             <div className="weather-temperature">
               {Math.round(props.data.temperature)}
             </div>
-
             <div className="weather-temperature-unit">°C</div>
           </div>
         </div>

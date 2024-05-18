@@ -59,7 +59,7 @@ header {
 .weather-icon canvas {
     display: flex;
     margin: 15px 10px;
-
+    width: 55px;
 }
 
 .weather-temperature {
