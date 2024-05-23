@@ -1,6 +1,6 @@
 header {
     border-bottom: 1px solid #e3d8ff;
-    padding: 0 0 30px 0;
+    padding: 0 0 20px 0;
 }
 
 .weather-app {
@@ -34,7 +34,7 @@ header {
 .weather-data {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin: 10px 15px;
 }
 
 .weather-city {
