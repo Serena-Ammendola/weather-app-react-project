@@ -59,21 +59,21 @@ header {
 
 .weather-icon canvas {
 
-    margin: 20px 7px;
+    margin: 17px 7px;
     width: 55px;
 }
 
 .weather-temperature {
-    font-size: 88px;
+    font-size: 82px;
     font-weight: bold;
-    line-height: 88px;
+    line-height: 82px;
 }
 
 .weather-temperature-unit {
     font-size: 20px;
     margin-top: 5px;
     position: relative;
-    top: -46px;
+    top: -44px;
 }
 
 .weather-temperature-unit a {
